@@ -1,0 +1,1 @@
+{"version":3,"sources":["base/_base.scss"],"names":[],"mappings":"AAAA;EACI,wBAAuB,EAC1B","file":"../main.css","sourcesContent":["body {\n    background-color: green;\n}"]}
