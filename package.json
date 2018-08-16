@@ -1,5 +1,5 @@
 {
-  "name": "personal-website-V.2",
+  "name": "personal-website-v2",
   "version": "1.0.0",
   "description": "Newest version of personal website",
   "main": "index.php",
@@ -19,6 +19,7 @@
     "gulp-sass": "latest",
     "gulp-sourcemaps": "latest",
     "gulp-uglify": "latest",
-    "lodash": "latest"
+    "lodash": "latest",
+    "hoek": "latest"
   }
 }
