@@ -3,6 +3,7 @@
 
   &__inner {
     position: relative;
+    border-bottom: 10px solid $color-green;
   }
 
   &__media {
@@ -29,14 +30,10 @@
 
   &__content {
     text-align: center;
-    padding: 100px 0;
+    padding: 20vw 0 20vw;
+  }
 
-    @media (min-width: $break-medium) {
-      padding: 150px 0;
-    }
-
-    @media (min-width: $break-large) {
-      padding: 200px 0;
-    }
+  &__title {
+    font-size: 60px;
   }
 }
