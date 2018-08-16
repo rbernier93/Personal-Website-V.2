@@ -1,8 +1,8 @@
 {
-  "name": "react-test",
+  "name": "personal-website-V.2",
   "version": "1.0.0",
-  "description": "a test of the react framework",
-  "main": "index.js",
+  "description": "Newest version of personal website",
+  "main": "index.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

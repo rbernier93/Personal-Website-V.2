@@ -1,0 +1,21 @@
+@mixin gutter {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (min-width: $break-medium) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $break-large) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@mixin fullwidth {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
