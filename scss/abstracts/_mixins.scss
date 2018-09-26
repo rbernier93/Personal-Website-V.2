@@ -19,3 +19,31 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+@mixin block() {
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -67px;
+    width: 60px;
+    height: 60px;
+    background-color: $color-green;
+    transform: skewY(18deg);
+    z-index: 1;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 110px;
+    bottom: -110px;
+    width: 30px;
+    height: 30px;
+    background-color: $color-red;
+    transform: skewY(-18deg);
+    z-index: 1;
+  }
+}

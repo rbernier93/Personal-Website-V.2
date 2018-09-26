@@ -1,0 +1,44 @@
+.bio {
+  @include fullwidth;
+  margin-bottom: 150px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__left {
+    order: 2;
+    opacity: 0;
+    transition: 0.2s ease;
+    transition-delay: 0.2s;
+  }
+
+  &__right {
+    order: 1;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: 0.2s ease;
+  }
+
+  &__media {
+    img {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__header {
+    text-align: center;
+  }
+
+  &.js-animate {
+    .bio {
+      &__left,
+      &__right {
+        opacity: 1;
+      }
+    }
+  }
+}

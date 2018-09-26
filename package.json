@@ -12,6 +12,7 @@
     "browser-sync": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
+    "gulp-babel": "^8.0.0",
     "gulp-concat": "latest",
     "gulp-notify": "latest",
     "gulp-plumber": "latest",
@@ -19,7 +20,7 @@
     "gulp-sass": "latest",
     "gulp-sourcemaps": "latest",
     "gulp-uglify": "latest",
-    "lodash": "latest",
-    "hoek": "latest"
+    "hoek": "latest",
+    "lodash": "latest"
   }
 }

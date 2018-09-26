@@ -1,9 +1,9 @@
 .hero {
   @include fullwidth;
+  margin-bottom: 150px;
 
   &__inner {
     position: relative;
-    border-bottom: 10px solid $color-green;
   }
 
   &__media {
@@ -29,11 +29,46 @@
   }
 
   &__content {
+    @include gutter;
+    padding-top: 30vw;
+    padding-bottom: 30vw;
     text-align: center;
-    padding: 20vw 0 20vw;
+
+    @media (min-width: $break-medium) {
+      padding-top: 20vh;
+      padding-bottom: 20vh;
+    }
+
+    @media (min-width: $break-large) {
+      padding-top: 22vh;
+      padding-bottom: 22vh;
+    }
   }
 
   &__title {
     font-size: 60px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    
+    @media (min-width: $break-medium) {
+      font-size: 70px;  
+    }
+    
+    @media (min-width: $break-large) {
+      font-size: 100px;  
+    }
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    
+    @media (min-width: $break-medium) {
+      font-size: 20px;  
+    }
+    
+    @media (min-width: $break-large) {
+      font-size: 24px;  
+    }
   }
 }
