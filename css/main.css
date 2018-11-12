@@ -687,9 +687,9 @@ span {
   left: 0;
   width: 100%;
   opacity: 0;
-  -webkit-transition: all 0.6s ease;
-  -o-transition: all 0.6s ease;
-  transition: all 0.6s ease; }
+  -webkit-transition: all 0.6s ease 0s;
+  -o-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s; }
   .page__inner:after {
     content: '';
     clear: both;
@@ -697,11 +697,19 @@ span {
   .page__left {
     float: left;
     width: 50%;
-    height: calc(100vh - 200px); }
+    opacity: 0;
+    height: calc(100vh - 200px);
+    -webkit-transition: all 0.6s calc(0.6s / 4);
+    -o-transition: all 0.6s calc(0.6s / 4);
+    transition: all 0.6s calc(0.6s / 4); }
   .page__right {
     float: left;
     width: 50%;
-    height: calc(100vh - 200px); }
+    opacity: 0;
+    height: calc(100vh - 200px);
+    -webkit-transition: all 0.6s calc(0.6s / 3);
+    -o-transition: all 0.6s calc(0.6s / 3);
+    transition: all 0.6s calc(0.6s / 3); }
   .page:nth-of-type(1) .page__left, .page:nth-of-type(3) .page__left {
     background-color: #EB2A41; }
   .page:nth-of-type(1) .page__right, .page:nth-of-type(3) .page__right {
@@ -712,6 +720,8 @@ span {
     background-color: #132142; }
   .page.js-active {
     opacity: 1; }
+    .page.js-active .page__left, .page.js-active .page__right {
+      opacity: 1; }
   .page.js-up {
     top: -100px; }
   .page.js-down {

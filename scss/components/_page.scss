@@ -8,7 +8,7 @@
   left: 0;
   width: 100%;
   opacity: 0;
-  transition: all $speed#{'s'} ease;
+  transition: all #{$delay} ease 0s;
 
   &__inner {
     @include clearfix;
@@ -17,13 +17,17 @@
   &__left {
     float: left;
     width: 50%;
+    opacity: 0;
     height: calc(100vh - 200px);
+    transition: all #{$delay} calc(#{$delay} / 4);
   }
 
   &__right {
     float: left;
     width: 50%;
+    opacity: 0;
     height: calc(100vh - 200px);
+    transition: all #{$delay} calc(#{$delay} / 3);
   }
 
   &:nth-of-type(1),
@@ -54,6 +58,13 @@
 
   &.js-active {
     opacity: 1;
+
+    .page {
+      &__left,
+      &__right {
+        opacity: 1;
+      }
+    }
   }
 
   &.js-up {
