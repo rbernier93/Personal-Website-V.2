@@ -7,16 +7,17 @@ var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var babel = require('gulp-babel');
 var rename = require('gulp-rename');
 
 
-gulp.task('browser-sync', function () {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
-});
+// gulp.task('browser-sync', function () {
+//     browserSync.init({
+//         server: {
+//             baseDir: "./"
+//         }
+//     });
+// });
 
 // Title used for system notifications
 var notifyInfo = {
@@ -39,8 +40,19 @@ gulp.task('html', function () {
 
 gulp.task('js', function () {
     gulp.src('./js/main.js')
+        .pipe(babel({
+            "presets": ["@babel/preset-env"]
+        }))
         .pipe(rename('main.min.js'))
         .pipe(gulp.dest('./js'));
+});
+
+gulp.task('vue', function () {
+    return gulp.src('./vueComponents/*.js')
+    .pipe(babel({
+        "presets": ["@babel/preset-env"]
+    }))
+    .pipe(gulp.dest('vueCompiled'));
 });
 
 gulp.task('sass', function () {
@@ -53,14 +65,15 @@ gulp.task('sass', function () {
         }))
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('./css'))
-        .pipe(browserSync.stream());
+        // .pipe(browserSync.stream());
 });
 
 gulp.task('watch', function () {
     gulp.watch("./scss/**/*.scss", ['sass']);
     gulp.watch("keyscreens/*.html", ['html']);
     gulp.watch("js/*.js", ['js']);
-    gulp.watch("keyscreens/*.html").on('change', browserSync.reload);
+    gulp.watch("./vueComponents/*.js", ['vue']);
+    // gulp.watch("keyscreens/*.html").on('change', browserSync.reload);
 });
 
-gulp.task('default', ['sass', 'html', 'js', 'browser-sync', 'watch']);
+gulp.task('default', ['sass', 'html', 'js', /*'browser-sync',*/ 'watch']);

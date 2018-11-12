@@ -1,0 +1,66 @@
+.pages {
+  position: relative;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all $speed#{'s'} ease;
+
+  &__inner {
+    @include clearfix;
+  }
+
+  &__left {
+    float: left;
+    width: 50%;
+    height: calc(100vh - 200px);
+  }
+
+  &__right {
+    float: left;
+    width: 50%;
+    height: calc(100vh - 200px);
+  }
+
+  &:nth-of-type(1),
+  &:nth-of-type(3) {
+    .page {
+      &__left {
+        background-color: $color-red;
+      }
+
+      &__right {
+        background-color: $color-blue-light;
+      }
+    }
+  }
+
+  &:nth-of-type(2),
+  &:nth-of-type(4) {
+    .page {
+      &__left {
+        background-color: $color-green;
+      }
+
+      &__right {
+        background-color: $color-blue-dark;
+      }
+    }
+  }
+
+  &.js-active {
+    opacity: 1;
+  }
+
+  &.js-up {
+    top: -100px;
+  }
+
+  &.js-down {
+    top: 100px;
+  }
+}

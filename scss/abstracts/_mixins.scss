@@ -13,6 +13,14 @@
   }
 }
 
+@mixin clearfix {
+  &:after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
 @mixin fullwidth {
   width: 100vw;
   position: relative;

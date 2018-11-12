@@ -1,0 +1,12 @@
+.main-nav {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  .nav__item {
+    span {
+      pointer-events: none;
+    }
+  }
+}

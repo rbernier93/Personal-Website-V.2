@@ -1,0 +1,10 @@
+[
+  '{{repeat(8, 14)}}',
+  {
+    title: '{{lorem(4, "words")}}',
+    dateStart: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-dd") }}',
+    dateEnd: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-dd")}}',
+    summary: '{{lorem(8, "words")}}',
+    description: '{{lorem(25, "words")}}'
+  }
+]

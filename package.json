@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
     "browser-sync": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",

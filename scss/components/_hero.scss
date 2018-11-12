@@ -1,6 +1,11 @@
 .hero {
   @include fullwidth;
-  margin-bottom: 150px;
+  color: $color-white;
+
+  @media (min-width: $content-max) {
+    width: $content-max;
+    margin-left: 0;
+  }
 
   &__inner {
     position: relative;
@@ -33,11 +38,7 @@
     padding-top: 30vw;
     padding-bottom: 30vw;
     text-align: center;
-
-    @media (min-width: $break-medium) {
-      padding-top: 20vh;
-      padding-bottom: 20vh;
-    }
+    background-color: $color-red;
 
     @media (min-width: $break-large) {
       padding-top: 22vh;
@@ -55,7 +56,7 @@
     }
     
     @media (min-width: $break-large) {
-      font-size: 100px;  
+      font-size: 130px;  
     }
   }
 

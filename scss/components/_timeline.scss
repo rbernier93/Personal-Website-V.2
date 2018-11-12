@@ -1,0 +1,93 @@
+.tln {
+  @include fullwidth;
+
+  &__inner {
+    @include gutter;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    max-width: 1900px;
+    margin: 0 auto;
+  }
+
+  &__line {
+    position: relative;
+    padding: 0;
+    list-style: none;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 10px;
+      height: 100%;
+      background-color: $color-white;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+// Timeline Project Item
+.project {
+  position: relative;
+  z-index: 1;
+  margin-top: 10vh;
+  margin-bottom: 300px;
+
+  &__toggle {
+    @include gutter;
+    width: 300px;
+    height: 300px;
+    margin-bottom: -150px;
+    border: 10px solid $color-red;
+    border-radius: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    @media (min-width: $break-medium) {
+      width: 300px;
+      height: 300px;
+      margin-bottom: -150px;
+    }
+
+    &:hover {
+      border: 15px solid $color-blue-light;
+      transform: scale(1.05);
+
+      .project__date {
+        opacity: 1;
+      }
+    }
+
+    &.js-active {
+      width: 300px;
+      height: 300px;
+    }
+
+    > * {
+      pointer-events: none;
+    }
+
+    .project {
+      &__title {
+        font-family: $font-playfair;
+        font-size: 30px;
+      }
+
+      &__date {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+    padding: 300px 0;
+    border-radius: 10px;
+    background-color: $color-white;
+    border: 1px solid $color-tan;
+  }
+}
