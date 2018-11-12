@@ -12,47 +12,37 @@
 
   &__inner {
     @include clearfix;
+    @include gutter;
+    padding-top: 19vh;
   }
 
   &__left {
     float: left;
     width: 50%;
     opacity: 0;
-    height: calc(100vh - 200px);
     transition: all #{$delay} calc(#{$delay} / 4);
+
+    @media (min-width: $break-medium) {
+      padding-right: 30px;
+    }
+
+    @media (min-width: $break-medium) {
+      padding-right: 50px;
+    }
   }
 
   &__right {
     float: left;
     width: 50%;
     opacity: 0;
-    height: calc(100vh - 200px);
     transition: all #{$delay} calc(#{$delay} / 3);
-  }
 
-  &:nth-of-type(1),
-  &:nth-of-type(3) {
-    .page {
-      &__left {
-        background-color: $color-red;
-      }
-
-      &__right {
-        background-color: $color-blue-light;
-      }
+    @media (min-width: $break-medium) {
+      padding-left: 30px;
     }
-  }
 
-  &:nth-of-type(2),
-  &:nth-of-type(4) {
-    .page {
-      &__left {
-        background-color: $color-green;
-      }
-
-      &__right {
-        background-color: $color-blue-dark;
-      }
+    @media (min-width: $break-medium) {
+      padding-left: 50px;
     }
   }
 

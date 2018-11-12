@@ -1,5 +1,12 @@
 .app {
   &__inner {
-    padding: 100px;
+    @media (min-width: $content-max) {
+      position: relative;
+      width: $content-max;
+      min-height: 100vh;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }

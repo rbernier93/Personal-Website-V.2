@@ -3,10 +3,87 @@
   top: 50%;
   right: 0;
   transform: translateY(-50%);
+  .nav {
+    &__list {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      list-style: none;
+    }
 
-  .nav__item {
-    span {
-      pointer-events: none;
+    &__item {
+      a {
+        position: relative;
+        display: block;
+        width: 50px;
+        height: 50px;
+        color: $color-tan;
+        text-decoration: none;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 50%;
+          width: 10px;
+          height: 10px;
+          border-radius: 100%;
+          background-color: $color-tan;
+          transition: background-color calc(#{$delay} / 2);
+          transform: translateX(-50%)translateY(-50%);
+        }
+
+        span {
+          position: absolute;
+          top: 50%;
+          right: -10px;
+          width: 200px;
+          opacity: 0;
+          font-size: 18px;
+          text-align: right;
+          margin-right: 70px;
+          pointer-events: none;
+          transform: translateY(-50%);
+          transition: all calc(#{$delay} / 2);
+        }
+
+        &:hover,
+        &:focus {
+          width: 100%;
+
+          span {
+            opacity: 1;
+            right: 0px;
+            color: $color-black-bg;
+          }
+
+          &:after {
+            background-color: $color-black-bg;
+          }
+        }
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+
+      &.js-active {
+        a {
+          &:after {
+            background-color: $color-black;
+          }
+
+          span {
+            opacity: 0;
+          }
+        }
+      }
+
+      &.shake-little {
+        a:after {
+          background-color: $color-black-light;
+        }
+      }
     }
   }
 }

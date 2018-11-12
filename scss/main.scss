@@ -1,6 +1,9 @@
 @import 'abstracts/_mixins';
 @import 'abstracts/_variables';
 
+
+@import 'vendor/_cssshake';
+
 @import 'base/_base';
 @import 'base/_typography';
 @import 'base/_normalize';
