@@ -3,11 +3,13 @@
   top: 50%;
   right: 0;
   transform: translateY(-50%);
+
   .nav {
     &__list {
       display: flex;
       flex-direction: column;
       margin: 0;
+      padding: 0;
       list-style: none;
     }
 
@@ -23,14 +25,13 @@
         &:after {
           content: '';
           position: absolute;
-          top: 50%;
-          right: 50%;
+          top: calc(50% - 5px);
+          right: calc(50% - 5px);
           width: 10px;
           height: 10px;
           border-radius: 100%;
           background-color: $color-tan;
           transition: background-color calc(#{$delay} / 2);
-          transform: translateX(-50%)translateY(-50%);
         }
 
         span {

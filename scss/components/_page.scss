@@ -8,12 +8,13 @@
   left: 0;
   width: 100%;
   opacity: 0;
+  padding-right: 50px;
   visibility: hidden;
   transition: all #{$delay} ease 0s;
 
   &__inner {
-    @include clearfix;
     @include gutter;
+    @include clearfix;
     padding-top: 19vh;
   }
 
@@ -22,21 +23,13 @@
     width: 50%;
     opacity: 0;
     transition: all #{$delay} calc(#{$delay} / 4);
-
-    @media (min-width: $break-medium) {
-      padding-right: 30px;
-    }
-
-    @media (min-width: $break-medium) {
-      padding-right: 50px;
-    }
   }
 
   &__right {
     float: left;
     width: 50%;
     opacity: 0;
-    transition: all #{$delay} calc(#{$delay} / 3);
+    transition: all #{$delay} calc(#{$delay} / 2);
 
     @media (min-width: $break-medium) {
       padding-left: 30px;

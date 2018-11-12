@@ -22,7 +22,19 @@ template: `
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ut, quam inventore quisquam voluptatem magnam itaque dolores corrupti, reiciendis dolorum quae omnis id? Eveniet beatae quae sapiente cum porro culpa?</p>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, totam. Consequuntur dicta asperiores doloremque voluptatum quas. Mollitia, numquam illum. Odit error perspiciatis iure ut amet aspernatur exercitationem quae, enim velit.</p>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad facilis rem hic, distinctio deserunt sint reprehenderit voluptates adipisci, commodi, quidem magni delectus quis iste. Maxime accusamus quia eligendi aliquid deleniti?</p>
-          </div>
+            <h1>Here is an H1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse dignissimos enim numquam. Consectetur veritatis quam nesciunt tempore, voluptatem natus dolore odit maxime iusto culpa? Fugiat magnam quod voluptas nam.</p>
+            <h2>Here is an H2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ut, quam inventore quisquam voluptatem magnam itaque dolores corrupti, reiciendis dolorum quae omnis id? Eveniet beatae quae sapiente cum porro culpa?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, totam. Consequuntur dicta asperiores doloremque voluptatum quas. Mollitia, numquam illum. Odit error perspiciatis iure ut amet aspernatur exercitationem quae, enim velit.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad facilis rem hic, distinctio deserunt sint reprehenderit voluptates adipisci, commodi, quidem magni delectus quis iste. Maxime accusamus quia eligendi aliquid deleniti?</p>
+            <h1>Here is an H1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse dignissimos enim numquam. Consectetur veritatis quam nesciunt tempore, voluptatem natus dolore odit maxime iusto culpa? Fugiat magnam quod voluptas nam.</p>
+            <h2>Here is an H2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ut, quam inventore quisquam voluptatem magnam itaque dolores corrupti, reiciendis dolorum quae omnis id? Eveniet beatae quae sapiente cum porro culpa?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, totam. Consequuntur dicta asperiores doloremque voluptatum quas. Mollitia, numquam illum. Odit error perspiciatis iure ut amet aspernatur exercitationem quae, enim velit.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad facilis rem hic, distinctio deserunt sint reprehenderit voluptates adipisci, commodi, quidem magni delectus quis iste. Maxime accusamus quia eligendi aliquid deleniti?</p>
+            </div>
         </div>
       </div>
 
