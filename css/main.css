@@ -1096,11 +1096,6 @@ span {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
      -moz-box-align: center;
@@ -1127,6 +1122,7 @@ span {
   left: 0;
   width: 100%;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: all 0.7s ease 0s;
   -o-transition: all 0.7s ease 0s;
   transition: all 0.7s ease 0s; }
@@ -1173,7 +1169,8 @@ span {
       .page__right {
         padding-left: 50px; } }
   .page.js-active {
-    opacity: 1; }
+    opacity: 1;
+    visibility: visible; }
     .page.js-active .page__left, .page.js-active .page__right {
       opacity: 1; }
   .page.js-up {
