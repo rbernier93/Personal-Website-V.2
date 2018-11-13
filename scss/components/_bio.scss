@@ -1,4 +1,8 @@
 .bio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &__img {
     position: relative;
     border-radius: 100%;
@@ -6,13 +10,29 @@
 
     img {
       width: 100%;
+      margin-bottom: -4px;
     }
   }
 
   .page {
-    &__left {
+    &__inner {
       display: flex;
       align-items: center;
+
+      @media (max-width: $break-medium - 1) {
+        flex-direction: column;
+      }
+    }
+
+    &__left {
+      @media (max-width: $break-medium - 1) {
+        margin-bottom: 20px;
+      }
+
+      @media (min-width: $break-medium) {
+        display: flex;
+        align-items: center;
+      }
     }
   }
 }
