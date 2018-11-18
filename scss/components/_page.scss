@@ -8,16 +8,20 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  overflow: auto;
+  overflow: hidden;
   opacity: 0;
   padding-right: 50px;
   visibility: hidden;
   transition: all #{$delay} ease 0s;
 
   &__inner {
+    position: relative;
+    top: 0;
     @include gutter;
     @include clearfix;
+    overflow: auto;
     height: 100%;
+    transition: all #{$delay} ease 0s;
   }
 
   &__left {
@@ -28,6 +32,11 @@
     @media (min-width: $break-medium) {
       float: left;
       width: 50%;
+      padding-right: 15px;
+    }
+
+    @media (min-width: $break-large) {
+      padding-right: 25px;
     }
   }
 
@@ -39,11 +48,11 @@
     @media (min-width: $break-medium) {
       float: left;
       width: 50%;
-      padding-left: 30px;
+      padding-left: 15px;
     }
 
     @media (min-width: $break-medium) {
-      padding-left: 50px;
+      padding-left: 25px;
     }
   }
 
@@ -60,10 +69,14 @@
   }
 
   &.js-up {
-    top: -100px;
+    .page__inner {
+      top: -100px;
+    }
   }
 
   &.js-down {
-    top: 100px;
+    .page__inner {
+      top: 100px;
+    }
   }
 }

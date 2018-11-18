@@ -3,15 +3,35 @@
   justify-content: center;
   align-items: center;
 
+  &__header {
+    margin-top: 0;
+  }
+
   &__img {
     position: relative;
-    border-radius: 100%;
+    max-width: 400px;
+    max-height: 400px;
     overflow: hidden;
 
     img {
       width: 100%;
       margin-bottom: -4px;
     }
+  }
+
+  // Bio accent block
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 45%;
+    max-width: 1920px;
+    max-height: 1080px;
+    background-color: $color-white2;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
   }
 
   .page {
@@ -31,8 +51,13 @@
 
       @media (min-width: $break-medium) {
         display: flex;
+        justify-content: center;
         align-items: center;
       }
+    }
+
+    &__right {
+      text-align: center;
     }
   }
 }
