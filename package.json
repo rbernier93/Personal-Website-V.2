@@ -23,6 +23,7 @@
     "gulp-sourcemaps": "latest",
     "gulp-uglify": "latest",
     "hoek": "latest",
-    "lodash": "latest"
+    "lodash": "latest",
+    "cryptiles": ">=4.1.2"
   }
 }
