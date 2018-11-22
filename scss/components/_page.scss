@@ -6,13 +6,16 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: calc(100% - 40px);
   height: 100vh;
   overflow: hidden;
   opacity: 0;
-  padding-right: 50px;
   visibility: hidden;
   transition: all #{$delay} ease 0s;
+
+  @media (min-width: $break-medium) {
+    width: calc(100% - 50px);
+  }
 
   &__inner {
     position: relative;
@@ -48,10 +51,6 @@
     @media (min-width: $break-medium) {
       float: left;
       width: 50%;
-      padding-left: 15px;
-    }
-
-    @media (min-width: $break-medium) {
       padding-left: 25px;
     }
   }

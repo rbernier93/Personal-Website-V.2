@@ -11,48 +11,52 @@
     position: relative;
     max-width: 400px;
     max-height: 400px;
-    overflow: hidden;
 
     img {
       width: 100%;
+      border-radius: 100%;
       margin-bottom: -4px;
     }
   }
 
-  // Bio accent block
   &:after {
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 60%;
-    height: 45%;
+    width: 75%;
+    height: 42%;
     max-width: 1920px;
     max-height: 1080px;
     background-color: $color-white2;
     transform: translateX(-50%) translateY(-50%);
     z-index: -1;
+
+    @media (min-width: $break-medium) {
+      width: 60%;
+      height: 45%;
+    }
   }
 
   .page {
     &__inner {
       display: flex;
       align-items: center;
+      height: 100%;
 
       @media (max-width: $break-medium - 1) {
         flex-direction: column;
+        height: auto;
       }
     }
 
     &__left {
-      @media (max-width: $break-medium - 1) {
-        margin-bottom: 20px;
-      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-      @media (min-width: $break-medium) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      @media (max-width: $break-medium - 1) {
+        margin-bottom: 25px;
       }
     }
 

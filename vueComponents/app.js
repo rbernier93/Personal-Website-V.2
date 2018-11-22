@@ -2,9 +2,17 @@ new Vue({
 el: '#app',
 template: `
 <div class='app'>
+  <div class='splash'>
+    <div class='splash__inner'>
+      <div class='splash__content'>
+        <h1 class='splash__header'>Robert Bernier</h1>
+        <p class='splash__subtext'>Web Developer</p>
+      </div>
+    </div>
+  </div>
   <div class='app__inner'>
     <div class='pages'>
-      <div class='bio page js-active'>
+      <div class='bio page'>
         <div class='page__inner'>
           <div class='page__left'>
             <div class='bio__img'>
@@ -16,7 +24,7 @@ template: `
               </div>
           </div>
           <div class='page__right'>
-            <h1 class='bio__header'>About Me.</h1>
+            <h2 class='bio__header'>About Me.</h2>
             <div class='bio__desc'>
               <p>I am a front-end web developer from the Greater Boston area. I have worked on many sites for higher education and non-profit organizations. I have 4,000 website launches under my belt.</p>
             </div>
@@ -26,7 +34,7 @@ template: `
 
       <div class='page'>
         <div class='page__inner'>
-          <h1>Here is an H1</h1>
+          <h2>Here is an H2</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse dignissimos enim numquam. Consectetur
             veritatis quam nesciunt tempore, voluptatem natus dolore odit maxime iusto culpa? Fugiat magnam quod voluptas
             nam.</p>
@@ -40,7 +48,7 @@ template: `
             reprehenderit voluptates adipisci, commodi, quidem magni delectus quis iste. Maxime accusamus quia eligendi
             aliquid deleniti?</p>
 
-          <h1>Here is an H1</h1>
+          <h2>Here is an H2</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse dignissimos enim numquam. Consectetur
             veritatis quam nesciunt tempore, voluptatem natus dolore odit maxime iusto culpa? Fugiat magnam quod voluptas
             nam.</p>
@@ -60,7 +68,7 @@ template: `
       <div class='page'>
         <div class='page__inner'>
           <div class='page__left'>
-              <h1>Here is an H1</h1>
+              <h2>Here is an H2</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse dignissimos enim numquam. Consectetur veritatis quam nesciunt tempore, voluptatem natus dolore odit maxime iusto culpa? Fugiat magnam quod voluptas nam.</p>
               <h2>Here is an H2</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ut, quam inventore quisquam voluptatem magnam itaque dolores corrupti, reiciendis dolorum quae omnis id? Eveniet beatae quae sapiente cum porro culpa?</p>
@@ -68,7 +76,7 @@ template: `
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad facilis rem hic, distinctio deserunt sint reprehenderit voluptates adipisci, commodi, quidem magni delectus quis iste. Maxime accusamus quia eligendi aliquid deleniti?</p>
           </div>
           <div class='page__right'>
-              <h1>Here is an H1</h1>
+              <h2>Here is an H2</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse dignissimos enim numquam. Consectetur veritatis quam nesciunt tempore, voluptatem natus dolore odit maxime iusto culpa? Fugiat magnam quod voluptas nam.</p>
               <h2>Here is an H2</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ut, quam inventore quisquam voluptatem magnam itaque dolores corrupti, reiciendis dolorum quae omnis id? Eveniet beatae quae sapiente cum porro culpa?</p>
@@ -81,7 +89,7 @@ template: `
       <div class='page'>
         <div class='page__inner'>
           <div class='page__left'>
-              <h1>Here is an H1</h1>
+              <h2>Here is an H2</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse dignissimos enim numquam. Consectetur veritatis quam nesciunt tempore, voluptatem natus dolore odit maxime iusto culpa? Fugiat magnam quod voluptas nam.</p>
               <h2>Here is an H2</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ut, quam inventore quisquam voluptatem magnam itaque dolores corrupti, reiciendis dolorum quae omnis id? Eveniet beatae quae sapiente cum porro culpa?</p>
@@ -89,7 +97,7 @@ template: `
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad facilis rem hic, distinctio deserunt sint reprehenderit voluptates adipisci, commodi, quidem magni delectus quis iste. Maxime accusamus quia eligendi aliquid deleniti?</p>
           </div>
           <div class='page__right'>
-              <h1>Here is an H1</h1>
+              <h2>Here is an H2</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse dignissimos enim numquam. Consectetur veritatis quam nesciunt tempore, voluptatem natus dolore odit maxime iusto culpa? Fugiat magnam quod voluptas nam.</p>
               <h2>Here is an H2</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ut, quam inventore quisquam voluptatem magnam itaque dolores corrupti, reiciendis dolorum quae omnis id? Eveniet beatae quae sapiente cum porro culpa?</p>
@@ -114,7 +122,7 @@ template: `
         </li>
         <li class='nav__item'>
           <a href='#' @click='changePage'>
-            <span>Hobbies + Interests</span>
+            <span>Interests</span>
           </a>
         </li>
         <li class='nav__item'>
@@ -132,8 +140,26 @@ data: {
     animating: false,
   },
 
+  mounted: function () {
+    const $delay = this.speed;
+
+    // Splash screen animation on page ready
+    $(document).ready(function () {
+      $('.splash').addClass('js-loaded');
+
+      setTimeout(() => {
+        $('.splash').addClass('js-hide');
+      }, Math.ceil($delay) * 2);
+
+      setTimeout(() => {
+        $('.bio').addClass('js-active');
+        $('.main-nav').addClass('js-visible');
+      }, Math.ceil($delay) * 2.5);
+    })
+  },
+
   methods: {
-    changePage: function(e) {
+    changePage: function (e) {
       e.preventDefault();
       const $this = this;
       const $targetIndex = $(e.target).parent().index();
@@ -157,16 +183,16 @@ data: {
         // Remove nav active state
         $('.nav__item').removeClass('js-active');
 
-          setTimeout(function() {
-            $originalPage.removeClass('js-up js-down');
-            $nextPage.removeClass('js-up js-down').addClass('js-active');
-            $(e.target).parent().addClass('js-active');
-            $this.animating = false;
-          }, this.speed);
-      } else if ($(e.target).parent().hasClass('js-active')){
+        setTimeout(function () {
+          $originalPage.removeClass('js-up js-down');
+          $nextPage.removeClass('js-up js-down').addClass('js-active');
+          $(e.target).parent().addClass('js-active');
+          $this.animating = false;
+        }, this.speed);
+      } else if ($(e.target).parent().hasClass('js-active')) {
         $(e.target).parent().addClass('shake-little');
 
-        setTimeout(function() {
+        setTimeout(function () {
           $(e.target).parent().removeClass('shake-little');
         }, this.speed / 2);
       }
