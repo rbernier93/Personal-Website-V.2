@@ -17,9 +17,9 @@
   <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
   <script src='../js/vendor/jquery.waypoints.min.js'></script>
   <script src='https://momentjs.com/downloads/moment.min.js'></script>
-  <script src='../js/main.js'></script>
   <script src='../js/vendor/vue.js'></script>
   <script src='../vueCompiled/app.js'></script>
+  <script src='../js/main.js'></script>
 </body>
 
 </html>

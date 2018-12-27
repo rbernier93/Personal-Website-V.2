@@ -86,29 +86,27 @@ template: `
         </div>
       </div>
 
-      <div class='page'>
+      <div class='page contact'>
         <div class='page__inner'>
-          <div class='page__left'>
-              <h2>Here is an H2</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse dignissimos enim numquam. Consectetur veritatis quam nesciunt tempore, voluptatem natus dolore odit maxime iusto culpa? Fugiat magnam quod voluptas nam.</p>
-              <h2>Here is an H2</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ut, quam inventore quisquam voluptatem magnam itaque dolores corrupti, reiciendis dolorum quae omnis id? Eveniet beatae quae sapiente cum porro culpa?</p>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, totam. Consequuntur dicta asperiores doloremque voluptatum quas. Mollitia, numquam illum. Odit error perspiciatis iure ut amet aspernatur exercitationem quae, enim velit.</p>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad facilis rem hic, distinctio deserunt sint reprehenderit voluptates adipisci, commodi, quidem magni delectus quis iste. Maxime accusamus quia eligendi aliquid deleniti?</p>
-          </div>
-          <div class='page__right'>
-              <h2>Here is an H2</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse dignissimos enim numquam. Consectetur veritatis quam nesciunt tempore, voluptatem natus dolore odit maxime iusto culpa? Fugiat magnam quod voluptas nam.</p>
-              <h2>Here is an H2</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ut, quam inventore quisquam voluptatem magnam itaque dolores corrupti, reiciendis dolorum quae omnis id? Eveniet beatae quae sapiente cum porro culpa?</p>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, totam. Consequuntur dicta asperiores doloremque voluptatum quas. Mollitia, numquam illum. Odit error perspiciatis iure ut amet aspernatur exercitationem quae, enim velit.</p>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad facilis rem hic, distinctio deserunt sint reprehenderit voluptates adipisci, commodi, quidem magni delectus quis iste. Maxime accusamus quia eligendi aliquid deleniti?</p>
+          <div class='contact__form'> 
+            <form action="mailto:someone@example.com" method="post" enctype="text/plain">
+            <label for='name'>Name:</label>
+            <input type="text" name="name" placeholder='Name'><br>
+            <label for='email'>E-mail:</label>
+            <input type="text" name="mail" placeholder='Email'><br>
+            <label for='comment'>Comment:</label>
+            <input type="text" name="comment" size="50" placeholder='Comment'><br><br>
+            <input type="submit" value="Send">
+            </form>
           </div>
         </div>
       </div>
     </div>
 
     <nav class='main-nav'>
+      <button class='nav__button' @click='openMenu($event)'>
+        <span class='visuallyhidden'>Main Navigation</span>
+      </button>
       <ul class='nav__list'>
         <li class='nav__item js-active'>
           <a href='#' @click='changePage'>
@@ -136,7 +134,7 @@ template: `
 </div>
 `,
 data: {
-    speed: 700,
+    speed: 800,
     animating: false,
   },
 
@@ -198,6 +196,10 @@ data: {
       }
 
       return false;
+    },
+
+    openMenu: function(e) {
+      
     }
   }
 });
