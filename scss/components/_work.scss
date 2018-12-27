@@ -1,0 +1,36 @@
+.work {
+  &__icon {
+    width: 70px;
+    height: 70px;
+    opacity: 1;
+    transition: opacity calc(#{$delay} / 2) ease;
+
+    @media (min-width: $break-medium) {
+      width: 80px;
+      height: 80px;
+    }
+
+    svg {
+      width: 100% !important;
+      height: 100%;
+      color: $color-black;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .page {
+    &__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}

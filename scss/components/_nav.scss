@@ -1,41 +1,119 @@
 .main-nav {
-  position: absolute;
-  top: 50%;
-  right: 0;
+  position: relative;
   opacity: 0;
   transition: opacity $delay ease $delay;
-  transform: translateY(-50%);
+
+  @media (min-width: $break-medium) {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+  }
 
   .nav {
     &__button {
       position: fixed;
       top: 0;
       right: 0;
-      width: 40px;
-      height: 40px;
-      background-color: $color-black;
+      width: 55px;
+      height: 55px;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
 
       @media (min-width: $break-medium) {
         display: none;
       }
+
+      span {
+        pointer-events: none;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          position: absolute;
+          top: calc(50% - 14px);
+          left: 50%;
+          display: block;
+          width: calc(70%);
+          height: 2px;
+          margin: 0 auto;
+          background-color: $color-black;
+          transition: all calc(#{$delay} / 2) ease;
+          transform: translateX(-50%) translateY(-50%);
+        }
+
+        &:nth-child(2) {
+          top: 50%;
+          opacity: 1;
+        }
+
+        &:nth-child(3) {
+          top: calc(50% + 14px);
+        }
+      }
+
+      &.js-active {
+        span {
+          &:nth-child(1),
+          &:nth-child(3) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: $color-white;
+          }
+
+          &:nth-child(1) {
+            transform: translateX(-50%)translateY(-50%)rotate(45deg);
+          }
+
+          &:nth-child(3) {
+            transform: translateX(-50%)translateY(-50%)rotate(-45deg);
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+        }
+      }
     }
 
     &__list {
-      display: flex;
+      display: none;
       flex-direction: column;
       margin: 0;
       padding: 0;
       list-style: none;
+
+      @media (max-width: $break-medium - 1) {
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba($color-black, 0.8);
+      }
+
+      @media (min-width: $break-medium) {
+        display: flex;
+      }
+
+      &.js-open {
+        display: flex;
+      }
     }
 
     &__item {
       a {
         position: relative;
         display: block;
-        width: 40px;
-        height: 40px;
-        color: $color-black;
+        color: $color-white;
         text-decoration: none;
+
+        @media (min-width: $break-medium) {
+          width: 40px;
+          height: 40px;
+          color: $color-black;
+        }
 
         @media (min-width: $content-max) {
           width: 50px;
@@ -43,39 +121,45 @@
         }
 
         &:after {
-          content: '';
-          position: absolute;
-          top: calc(50% - 3.5px);
-          right: calc(50% - 3.5px);
-          width: 7px;
-          height: 7px;
-          border-radius: 100%;
-          background-color: $color-blue;
-          transition: background-color calc(#{$delay} / 2);
+          @media (min-width: $break-medium) {
+            content: '';
+            position: absolute;
+            top: calc(50% - 3.5px);
+            right: calc(50% - 3.5px);
+            width: 7px;
+            height: 7px;
+            border-radius: 100%;
+            background-color: $color-blue;
+            transition: background-color calc(#{$delay} / 2);
 
-          @media (min-width: $content-max) {
-            top: calc(50% - 4px);
-            right: calc(50% - 4px);
-            width: 8px;
-            height: 8px;
+            @media (min-width: $content-max) {
+              top: calc(50% - 4px);
+              right: calc(50% - 4px);
+              width: 8px;
+              height: 8px;
+            }
           }
         }
 
         span {
-          position: absolute;
-          top: 50%;
-          right: -7px;
-          opacity: 0;
-          font-size: 16px;
-          direction: rtl;
-          text-align: center;
-          margin-right: 45px;
+          font-size: 24px;
           pointer-events: none;
-          transform: translateY(-50%);
-          transition: all calc(#{$delay} / 2);
 
-          @media (min-width: $content-max) {
-            margin-right: 60px;
+          @media (min-width: $break-medium) {
+            position: absolute;
+            top: 50%;
+            right: -7px;
+            opacity: 0;
+            font-size: 16px;
+            direction: rtl;
+            text-align: center;
+            margin-right: 45px;
+            transform: translateY(-50%);
+            transition: all calc(#{$delay} / 2);
+
+            @media (min-width: $content-max) {
+              margin-right: 60px;
+            }
           }
         }
 
@@ -88,14 +172,22 @@
           }
 
           span {
-            opacity: 1;
-            right: 0;
+            opacity: 0.8;
+
+            @media (min-width: $break-medium) {
+              opacity: 1;
+              right: 0;
+            }
           }
         }
       }
 
       &:not(:last-of-type) {
-        margin-bottom: 5px;
+        margin-bottom: 15px;
+
+        @media (min-width: $break-medium) {
+          margin-bottom: 5px;
+        }
 
         @media (min-width: $content-max) {
           margin-bottom: 10px;
@@ -109,7 +201,9 @@
           }
 
           span {
-            opacity: 0;
+            @media (min-width: $break-medium) {
+              opacity: 0;
+            }
           }
         }
       }

@@ -1,7 +1,7 @@
 form {
   input {
     &[type='text'] {
-      @include gutter;
+      padding: 0 15px;
       width: 100%;
       height: 40px;
       font-size: 16px;
@@ -9,6 +9,10 @@ form {
       margin-bottom: 20px;
       border: 0;
       border-bottom: 2px solid $color-black;
+
+      @media (min-width: $break-medium) {
+        padding: 0 30px;
+      }
 
       @media (min-width: $break-large) {
         height: 70px;
@@ -21,10 +25,14 @@ form {
     }
 
     &[type='submit'] {
-      @include gutter;
+      padding: 0 15px;
       height: 40px;
       background: none;
       border: 2px solid $color-black;
+
+      @media (min-width: $break-medium) {
+        padding: 0 30px;
+      }
 
       @media (min-width: $break-large) {
         height: 50px;

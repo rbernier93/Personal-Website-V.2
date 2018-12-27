@@ -2,6 +2,11 @@
   padding-left: 15px;
   padding-right: 15px;
 
+  @media (min-width: 450px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
   @media (min-width: $break-medium) {
     padding-left: 30px;
     padding-right: 30px;

@@ -17,87 +17,79 @@ template: `
           <div class='page__left'>
             <div class='bio__img'>
               <picture>
-                  <source srcset="../img/bio-pic.png" media="(min-width: 1024px)" />
-                  <source srcset="../img/bio-pic.png" media="(min-width: 700px)" />
-                  <img srcset="../img/bio-pic.png" alt="Sample pic" />
-                </picture>
-              </div>
+                <source srcset="../img/bio-pic.png" media="(min-width: 1024px)" />
+                <source srcset="../img/bio-pic.png" media="(min-width: 700px)" />
+                <img srcset="../img/bio-pic.png" alt="Sample pic" />
+              </picture>
+            </div>
           </div>
           <div class='page__right'>
-            <h2 class='bio__header'>About Me.</h2>
+            <h2 class='page__title'>About Me.</h2>
             <div class='bio__desc'>
-              <p>I am a front-end web developer from the Greater Boston area. I have worked on many sites for higher education and non-profit organizations. I have 4,000 website launches under my belt.</p>
+              <p>I am a web developer from Boston, MA. I have worked on many sites for higher education and non-profit
+                organizations. I love the middleground between design and development.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class='page'>
+      <div class='work page'>
         <div class='page__inner'>
-          <h2>Here is an H2</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse dignissimos enim numquam. Consectetur
-            veritatis quam nesciunt tempore, voluptatem natus dolore odit maxime iusto culpa? Fugiat magnam quod voluptas
-            nam.</p>
-          <h2>Here is an H2</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ut, quam inventore quisquam voluptatem magnam
-            itaque dolores corrupti, reiciendis dolorum quae omnis id? Eveniet beatae quae sapiente cum porro culpa?</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, totam. Consequuntur dicta asperiores
-            doloremque voluptatum quas. Mollitia, numquam illum. Odit error perspiciatis iure ut amet aspernatur
-            exercitationem quae, enim velit.</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad facilis rem hic, distinctio deserunt sint
-            reprehenderit voluptates adipisci, commodi, quidem magni delectus quis iste. Maxime accusamus quia eligendi
-            aliquid deleniti?</p>
-
-          <h2>Here is an H2</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse dignissimos enim numquam. Consectetur
-            veritatis quam nesciunt tempore, voluptatem natus dolore odit maxime iusto culpa? Fugiat magnam quod voluptas
-            nam.</p>
-          <h2>Here is an H2</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ut, quam inventore quisquam voluptatem magnam
-            itaque dolores corrupti, reiciendis dolorum quae omnis id? Eveniet beatae quae sapiente cum porro culpa?</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, totam. Consequuntur dicta asperiores
-            doloremque voluptatum quas. Mollitia, numquam illum. Odit error perspiciatis iure ut amet aspernatur
-            exercitationem quae, enim velit.</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad facilis rem hic, distinctio deserunt sint
-            reprehenderit voluptates adipisci, commodi, quidem magni delectus quis iste. Maxime accusamus quia eligendi
-            aliquid deleniti?</p>
-
+          <h2 class='page__title'>My Work.</h2>
+          <p>I have worked on websites for web development agencies, higher education, and the U.S. Army.</p>
+          <p><a href='https://github.com/RobBernier'>Check out my Repos</a></p>
         </div>
       </div>
 
-      <div class='page'>
+      <div class='interests page'>
         <div class='page__inner'>
           <div class='page__left'>
-              <h2>Here is an H2</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse dignissimos enim numquam. Consectetur veritatis quam nesciunt tempore, voluptatem natus dolore odit maxime iusto culpa? Fugiat magnam quod voluptas nam.</p>
-              <h2>Here is an H2</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ut, quam inventore quisquam voluptatem magnam itaque dolores corrupti, reiciendis dolorum quae omnis id? Eveniet beatae quae sapiente cum porro culpa?</p>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, totam. Consequuntur dicta asperiores doloremque voluptatum quas. Mollitia, numquam illum. Odit error perspiciatis iure ut amet aspernatur exercitationem quae, enim velit.</p>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad facilis rem hic, distinctio deserunt sint reprehenderit voluptates adipisci, commodi, quidem magni delectus quis iste. Maxime accusamus quia eligendi aliquid deleniti?</p>
+            <h2>My Interests.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse dignissimos enim numquam.
+              Consectetur veritatis quam nesciunt tempore, voluptatem natus dolore odit maxime iusto culpa? Fugiat
+              magnam quod voluptas nam.</p>
           </div>
           <div class='page__right'>
-              <h2>Here is an H2</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse dignissimos enim numquam. Consectetur veritatis quam nesciunt tempore, voluptatem natus dolore odit maxime iusto culpa? Fugiat magnam quod voluptas nam.</p>
-              <h2>Here is an H2</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ut, quam inventore quisquam voluptatem magnam itaque dolores corrupti, reiciendis dolorum quae omnis id? Eveniet beatae quae sapiente cum porro culpa?</p>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, totam. Consequuntur dicta asperiores doloremque voluptatum quas. Mollitia, numquam illum. Odit error perspiciatis iure ut amet aspernatur exercitationem quae, enim velit.</p>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad facilis rem hic, distinctio deserunt sint reprehenderit voluptates adipisci, commodi, quidem magni delectus quis iste. Maxime accusamus quia eligendi aliquid deleniti?</p>
+            <div class='interests__gallery'>
+              <picture>
+                <source srcset="../img/bio-pic.png" media="(min-width: 1024px)" />
+                <source srcset="../img/bio-pic.png" media="(min-width: 700px)" />
+                <img srcset="../img/bio-pic.png" alt="Sample pic" />
+              </picture>
+
+              <picture>
+                <source srcset="../img/bio-pic.png" media="(min-width: 1024px)" />
+                <source srcset="../img/bio-pic.png" media="(min-width: 700px)" />
+                <img srcset="../img/bio-pic.png" alt="Sample pic" />
+              </picture>
+
+              <picture>
+                <source srcset="../img/bio-pic.png" media="(min-width: 1024px)" />
+                <source srcset="../img/bio-pic.png" media="(min-width: 700px)" />
+                <img srcset="../img/bio-pic.png" alt="Sample pic" />
+              </picture>
+            </div>
           </div>
         </div>
       </div>
 
       <div class='page contact'>
         <div class='page__inner'>
-          <div class='contact__form'> 
-            <form action="mailto:someone@example.com" method="post" enctype="text/plain">
-            <label for='name'>Name:</label>
-            <input type="text" name="name" placeholder='Name'><br>
-            <label for='email'>E-mail:</label>
-            <input type="text" name="mail" placeholder='Email'><br>
-            <label for='comment'>Comment:</label>
-            <input type="text" name="comment" size="50" placeholder='Comment'><br><br>
-            <input type="submit" value="Send">
-            </form>
+          <div class='page__left'>
+            <h2 class='page__title'>Let's Make a Website.</h2>
+          </div>
+          <div class='page__right'>
+            <div class='contact__form'>
+              <form action="mailto:someone@example.com" method="post" enctype="text/plain">
+                <label for='name'>Name:</label>
+                <input type="text" name="name" placeholder='Name'><br>
+                <label for='email'>E-mail:</label>
+                <input type="text" name="mail" placeholder='Email'><br>
+                <label for='comment'>Comment:</label>
+                <input type="text" name="comment" size="50" placeholder='Comment'><br><br>
+                <input type="submit" value="Send">
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -105,7 +97,10 @@ template: `
 
     <nav class='main-nav'>
       <button class='nav__button' @click='openMenu($event)'>
-        <span class='visuallyhidden'>Main Navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class='visually-hidden'>Main Navigation</span>
       </button>
       <ul class='nav__list'>
         <li class='nav__item js-active'>
@@ -158,7 +153,9 @@ data: {
 
   methods: {
     changePage: function (e) {
+      e.stopPropagation();
       e.preventDefault();
+
       const $this = this;
       const $targetIndex = $(e.target).parent().index();
       const $navIndex = $('.nav__item.js-active').index();
@@ -166,9 +163,13 @@ data: {
       const $originalPage = $('.page').eq($navIndex);
       const $nextPage = $('.page').eq($targetIndex);
 
-
       if (!$(e.target).parent().hasClass('js-active') && this.animating == false) {
         this.animating = true;
+
+        // Close menu on mobile
+        $('.nav__button').removeClass('js-active');
+        $('.nav__list').removeClass('js-open');
+
         if ($targetIndex > $navIndex) {
           // Move current slide out of view
           $originalPage.addClass('js-up').removeClass('js-active');
@@ -199,7 +200,11 @@ data: {
     },
 
     openMenu: function(e) {
-      
+      e.stopPropagation();
+      e.preventDefault();
+
+      $(e.target).toggleClass('js-active');
+      $('.nav__list').toggleClass('js-open');
     }
   }
 });

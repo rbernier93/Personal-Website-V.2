@@ -1,14 +1,15 @@
 .contact {
   .page {
-    &__inner { 
+    &__inner {
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
       height: 100%;
-    }
-  }
 
-  .form {
-    
+      @media (min-width: $break-medium) {
+        flex-direction: row;
+      }
+    }
   }
 }

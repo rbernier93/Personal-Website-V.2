@@ -1,0 +1,38 @@
+.interests {
+  &__gallery {
+    img {
+      width: 100%;
+    }
+  }
+
+  .page {
+    &__inner {
+      @media (min-width: $break-medium) {
+        padding-right: 0;
+      }
+    }
+
+    &__left {
+      @media (max-width: $break-medium - 1) {
+        margin-bottom: 25px;
+      }
+
+      @media (min-width: $break-medium) {
+        position: fixed;
+        top: 50%;
+        width: calc(50% - 55px);
+        transform: translateY(-50%);
+      }
+
+      @media (min-width: $break-large) {
+        width: calc(50% - 75px);
+      }
+    }
+
+    &__right {
+      @media (min-width: $break-medium) {
+        margin-left: 50%;
+      }
+    }
+  }
+}
