@@ -2,6 +2,7 @@
   position: relative;
   opacity: 0;
   transition: opacity $delay ease $delay;
+  z-index: 1;
 
   @media (min-width: $break-medium) {
     position: absolute;
@@ -129,7 +130,7 @@
             width: 7px;
             height: 7px;
             border-radius: 100%;
-            background-color: $color-blue;
+            background-color: $color-blue2;
             transition: background-color calc(#{$delay} / 2);
 
             @media (min-width: $content-max) {
@@ -168,7 +169,7 @@
           width: 100%;
 
           &:after {
-            opacity: 0.9;
+            background-color: $color-blue;
           }
 
           span {
@@ -197,7 +198,7 @@
       &.js-active {
         a {
           &:after {
-            background-color: $color-black;
+            background-color: $color-blue;
           }
 
           span {

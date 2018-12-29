@@ -22,12 +22,19 @@ template: `
                 <img srcset="../img/bio-pic.png" alt="Sample pic" />
               </picture>
             </div>
+            <div class='bio__marble'>
+              <picture>
+                <source srcset="../img/marble.png" media="(min-width: 1024px)" />
+                <source srcset="../img/marble--med.png" media="(min-width: 700px)" />
+                <img srcset="../img/marble--small.png" alt="Sample pic" />
+              </picture>
+            </div>
           </div>
           <div class='page__right'>
             <h2 class='page__title'>About Me.</h2>
             <div class='bio__desc'>
               <p>I am a web developer from Boston, MA. I have worked on many sites for higher education and non-profit
-                organizations. I love the middleground between design and development.</p>
+                organizations. I love the middle ground between design and development.</p>
             </div>
           </div>
         </div>
@@ -52,21 +59,21 @@ template: `
           <div class='page__right'>
             <div class='interests__gallery'>
               <picture>
-                <source srcset="../img/bio-pic.png" media="(min-width: 1024px)" />
-                <source srcset="../img/bio-pic.png" media="(min-width: 700px)" />
-                <img srcset="../img/bio-pic.png" alt="Sample pic" />
+                <source srcset="../img/car.gif" media="(min-width: 1024px)" />
+                <source srcset="../img/car.gif" media="(min-width: 700px)" />
+                <img srcset="../img/car.gif" alt="Sample pic" />
               </picture>
 
               <picture>
-                <source srcset="../img/bio-pic.png" media="(min-width: 1024px)" />
-                <source srcset="../img/bio-pic.png" media="(min-width: 700px)" />
-                <img srcset="../img/bio-pic.png" alt="Sample pic" />
+                <source srcset="../img/walk.gif" media="(min-width: 1024px)" />
+                <source srcset="../img/walk.gif" media="(min-width: 700px)" />
+                <img srcset="../img/walk.gif" alt="Sample pic" />
               </picture>
 
               <picture>
-                <source srcset="../img/bio-pic.png" media="(min-width: 1024px)" />
-                <source srcset="../img/bio-pic.png" media="(min-width: 700px)" />
-                <img srcset="../img/bio-pic.png" alt="Sample pic" />
+                <source srcset="../img/stopmo-bio.jpg" media="(min-width: 1024px)" />
+                <source srcset="../img/stopmo-bio.jpg" media="(min-width: 700px)" />
+                <img srcset="../img/stopmo-bio.jpg" alt="Sample pic" />
               </picture>
             </div>
           </div>

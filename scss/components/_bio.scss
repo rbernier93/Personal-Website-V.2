@@ -13,9 +13,43 @@
     }
 
     img {
+      position: relative;
       width: 100%;
       border-radius: 100%;
       margin-bottom: -4px;
+      z-index: 1;
+    }
+  }
+
+  &__marble {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(80% + 50px);
+    height: 0;
+    padding-top: calc(80% + 50px);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transform: translateX(-50%)translateY(-50%);
+    z-index: 0;
+    opacity: 0;
+    transition: opacity #{$delay} calc(#{$delay} / 4), top #{$delay} 0s;
+
+    @media (min-width: $break-medium) {
+      top: -50%;
+      left: -50%;
+      width: 50vw;
+      padding-top: 50vw;
+      transform: none;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -47,21 +81,50 @@
       @media (max-width: $break-medium - 1) {
         flex-direction: column;
         height: auto;
+        overflow: visible;
       }
     }
 
     &__left {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
 
       @media (max-width: $break-medium - 1) {
+        padding-top: 25px;
+        padding-bottom: 25px;
         margin-bottom: 25px;
+        max-width: 400px;
       }
     }
 
     &__right {
       text-align: center;
+    }
+  }
+
+  // Set location of marble on up / down
+  &.js-up {
+    .bio__marble {
+      top: -100px;
+    }
+  }
+
+  &.js-down {
+    .bio__marble {
+      top: 100px;
+    }
+  }
+
+  &.js-active {
+    .bio__marble {
+      opacity: 1;
+      top: 50%;
+
+      @media (min-width: $break-medium) {
+        top: -50%;
+      }
     }
   }
 }

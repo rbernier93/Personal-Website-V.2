@@ -29,6 +29,7 @@
     overflow: auto;
     height: 100%;
     transition: all #{$delay} ease 0s;
+    z-index: 1;
   }
 
   &__left {
