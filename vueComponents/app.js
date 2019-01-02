@@ -42,19 +42,29 @@ template: `
 
       <div class='work page'>
         <div class='page__inner'>
+            <div class='page__left'>
           <h2 class='page__title'>My Work.</h2>
           <p>I have worked on websites for web development agencies, higher education, and the U.S. Army.</p>
           <p><a href='https://github.com/RobBernier'>Check out my Repos</a></p>
+          </div>
+          <div class='page__right'>
+            <h3>Some Tech + standards That I am familiar with</h3>
+            <ul>
+              <li>HTML, CSS, JS</li>
+              <li>Vue Framework</li>
+              <li>SASS Preprocessor</li>
+              <li>BEM Naming Convention</li>
+              <li>WCAG 2.0 AA Standards</li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <div class='interests page'>
         <div class='page__inner'>
           <div class='page__left'>
-            <h2>My Interests.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis esse dignissimos enim numquam.
-              Consectetur veritatis quam nesciunt tempore, voluptatem natus dolore odit maxime iusto culpa? Fugiat
-              magnam quod voluptas nam.</p>
+            <h2 class='page__title'>My Interests.</h2>
+            <p>From development to animation, I am constantly looking for new ways to broaden my creative outlets. It is a pivotal part of my craft.</p>
           </div>
           <div class='page__right'>
             <div class='interests__gallery'>
@@ -87,14 +97,17 @@ template: `
           </div>
           <div class='page__right'>
             <div class='contact__form'>
-              <form action="mailto:someone@example.com" method="post" enctype="text/plain">
+              <form action="mailto:robbernierweb@gmail.com" method="post" enctype="text/plain">
                 <label for='name'>Name:</label>
-                <input type="text" name="name" placeholder='Name'><br>
+                <input id='name' type="text" name="name" placeholder='Name'><br>
                 <label for='email'>E-mail:</label>
-                <input type="text" name="mail" placeholder='Email'><br>
-                <label for='comment'>Comment:</label>
-                <input type="text" name="comment" size="50" placeholder='Comment'><br><br>
-                <input type="submit" value="Send">
+                <input id='email' type="text" name="email" placeholder='Email'><br>
+                <label for='description'>Project Description:</label>
+                <textarea id='description' type="text" name="description" size="50" placeholder='Project Description'>
+                </textarea><br>
+                <div class='submit'>
+                  <input type="submit" value="Send">
+                </div>
               </form>
             </div>
           </div>

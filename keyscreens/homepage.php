@@ -6,7 +6,7 @@
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <title>Robert Bernier: Web Developer</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link href='https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Playfair+Display' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:300,400,700" rel="stylesheet">
   <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css' />
 </head>
 

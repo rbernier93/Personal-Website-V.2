@@ -3,6 +3,10 @@
   justify-content: center;
   align-items: center;
 
+  @media (min-width: $content-max) {
+    overflow: visible;
+  }
+
   &__img {
     position: relative;
     max-width: 450px;
@@ -44,6 +48,18 @@
       transform: none;
     }
 
+    @media (min-width: $break-large) {
+      width: 50vw;
+      height: 50vw;
+      max-width: 580px;
+      max-height: 580px;
+      padding-top: 0;
+    }
+
+    @media (min-width: $break-large + 200) {
+      left: -25%;
+    }
+
     img {
       position: absolute;
       top: 0;
@@ -81,6 +97,10 @@
       @media (max-width: $break-medium - 1) {
         flex-direction: column;
         height: auto;
+        overflow: visible;
+      }
+
+      @media (min-width: $content-max) {
         overflow: visible;
       }
     }

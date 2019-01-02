@@ -10,6 +10,29 @@ form label {
 }
 
 .page a {
+  position: relative;
   text-decoration: none;
   font-weight: 700;
+  color: $color-green2;
+  transition: all $delay ease;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: $color-green2;
+    transition: all $delay ease;
+  }
+
+  &:hover {
+    color: $color-green;
+
+    &:after {
+      width: 100%;
+      background-color: $color-green;
+    }
+  }
 }

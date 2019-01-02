@@ -1,4 +1,10 @@
 .work {
+  @media (max-width: $break-medium - 1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__icon {
     width: 70px;
     height: 70px;
@@ -25,12 +31,31 @@
     &__inner {
       display: flex;
       align-items: center;
-      justify-content: center;
-      flex-direction: column;
       height: 100%;
-      width: 80%;
-      margin: 0 auto;
-      text-align: center;
+
+      @media (max-width: $break-medium - 1) {
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
+      }
+
+      @media (min-width: $content-max) {
+        overflow: visible;
+      }
+    }
+
+    &__left,
+    &__right {
+      @media (max-width: $break-medium - 1) {
+        text-align: center;
+      }
+
+      ul {
+        @media (max-width: $break-medium - 1) {
+          display: inline-block;
+          margin: 0 auto;
+        }
+      }
     }
   }
 }

@@ -7,8 +7,13 @@
 
   .page {
     &__inner {
+      @media (max-width: $break-medium - 1) {
+        padding-top: 55px;
+        padding-bottom: 30px;
+      }
+
       @media (min-width: $break-medium) {
-        padding-right: 0;
+        padding-right: 25px;
       }
     }
 
@@ -22,6 +27,7 @@
         top: 50%;
         width: calc(50% - 55px);
         transform: translateY(-50%);
+        transition: all $delay ease;
       }
 
       @media (min-width: $break-large) {
@@ -33,6 +39,18 @@
       @media (min-width: $break-medium) {
         margin-left: 50%;
       }
+    }
+  }
+
+  &.js-up {
+    .page__left {
+      top: calc(50% - 100px);
+    }
+  }
+
+  &.js-down {
+    .page__left {
+      top: calc(50% + 100px);
     }
   }
 }
